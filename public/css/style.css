@@ -1,0 +1,197 @@
+/* RGB */
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#sidebar {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  background-color: #ddc;
+  height: 100%;
+  border-right: 2px solid grey;
+}
+
+#sidebar .room {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: capitalize;
+}
+
+#sidebar .user_header {
+  color: #522aaf;
+  margin-left: 1em;
+}
+
+#sidebar .user_list {
+  list-style: none;
+  text-transform: capitalize;
+}
+
+.container {
+  -webkit-box-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
+  margin: 0 30px;
+  border: 3px solid #ff9f1c;
+  border-radius: 10px;
+  height: 90%;
+  width: 30%;
+  min-width: 400px;
+  overflow: hidden;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f6f8f5;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .header {
+  font-size: 2em;
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10;
+  background-color: #522aaf;
+  color: #f6f8f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-clip-path: circle(50vh at 50% -41vh);
+          clip-path: circle(50vh at 50% -41vh);
+}
+
+.container .messages {
+  -webkit-box-flex: 70;
+      -ms-flex: 70;
+          flex: 70;
+  margin: 0;
+  padding: 0.5em 1em;
+  overflow-y: auto;
+}
+
+.container .messages div {
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: 3px 10px;
+  padding: 2px 5px;
+}
+
+.container .messages span.messageDate {
+  color: #011627;
+  font-style: italic;
+  font-size: smaller;
+}
+
+.container .messages span.user {
+  color: #011627;
+  font-style: bold;
+}
+
+.container .messages a i {
+  font-size: 3em;
+}
+
+.container .type_area {
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10;
+  margin: 0;
+  background-color: #522aaf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .type_area form {
+  width: 96%;
+}
+
+.container .type_area .controls {
+  width: 100%;
+  margin: 0.5em 0;
+  height: 60%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% 10% 10%;
+      grid-template-columns: 80% 10% 10%;
+}
+
+.container .type_area .controls input#message {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border: 0;
+  padding: 0.3em 0.6em;
+  line-height: 1.5em;
+  font-size: 1.5em;
+}
+
+.container .type_area .controls #postMessage {
+  background-color: #ff9f1c;
+  color: #f6f8f5;
+  border: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.4em;
+}
+
+.container .type_area .controls span#sendLocation {
+  background-color: #2ec4b6;
+  color: #f6f8f5;
+  border: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.8em;
+}
+/*# sourceMappingURL=style.css.map */

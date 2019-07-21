@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="users" id="sidebar">
+    </div>
+    <div class="container">
+        <div class="header">Let's Chat</div>
+        <div class="messages">
+
+        </div>
+        <div class="type_area">
+            <form action="#" autocomplete="off">
+                <div class="controls">
+                    <input type="text" id="message" />
+                    <button id="postMessage" title="Send" type="submit">
+                        <i class="fa fa-paper-plane"></i>
+                    </button>
+                    <span id="sendLocation" title="Share Location">
+                        <i class="fa fa-map-marker"></i>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script id="message-template" type="text/html">
+        <div>
+            <span class="user">{{user.username}}</span>
+            <span class="messageDate">{{createdAt}} : </span>
+            <p>{{text}}</p>
+        </div>
+    </script>
+    <script id="location-message-template" type="text/html">
+        <div>
+            <span class="user">{{user.username}}</span>
+            <span class="messageDate">{{createdAt}} : </span>
+            <p><a href="{{locationUrl}}" target="_blank"><i class="fa fa-map-marker"></i></a> My Location</p>
+        </div>
+    </script>
+    <script id="sidebar-template" type="text/html">
+        <h2 class="room">{{room}}</h2>
+        <h3 class="user_header">Users</h3>
+        <ul class="user_list">
+            {{#users}}
+                <li>{{username}}</li>
+            {{/users}}
+    </script>
+
+    <script src="/js/mustache.min.js"></script>
+    <script src="/js/moment.min.js"></script>
+    <script src="/js/qs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+
+</html>

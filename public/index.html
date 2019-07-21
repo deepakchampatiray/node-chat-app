@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container vh-100 d-flex justify-content-center align-items-center">
+        <div class="card shadow p-3 mb-5 bg-white rounded align-middle" style="width: 24rem;">
+            <img src="/images/chat-app-logo.jpg" class="card-img-top" alt="Chat app Logo">
+            <div class="card-body">
+                <h5 class="card-title">Choose your Chat Room</h5>
+                <p class="card-text">
+                    <form method="GET" action="./chat.html"> 
+                        <div class="form-group">
+                            <label for="username">Display Name</label>
+                            <input  type="text" 
+                                    required 
+                                    autocomplete="name" 
+                                    class="form-control" 
+                                    id="username" 
+                                    name="username" 
+                                    placeholder="Nerdy Nancy">
+                        </div>
+                        <div class="form-group">
+                            <label for="room">Room</label>
+                            <input  type="text" 
+                                    required 
+                                    class="form-control" 
+                                    id="room" 
+                                    name="room" 
+                                    placeholder="Pshyced about Physics">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-block btn-primary">Join</button>
+                    </form>
+                </p>
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+@import 'mixin';
+@import 'theme';
+
+body {
+    @include flex-center;
+    height: 100vh;
+    margin: 0;
+    font-family:  $base-font;
+}
+
+#sidebar {
+    flex: 3;
+    background-color: #ddc;
+    height: 100%;
+    border-right: 2px solid grey;
+
+    .room {
+        @include flex-center;
+        text-transform: capitalize;
+    }
+    .user_header {
+        color: $secondary;
+        margin-left: 1em;
+    }
+    .user_list {
+        list-style: none;
+        text-transform: capitalize;
+    }
+}
+
+.container {
+    flex: 7;
+    margin: 0 30px;
+    border: 3px solid $primary;
+    border-radius: 10px;
+    height: 90%;
+    width: 30%;
+    min-width: 400px;
+    overflow: hidden;
+    font-family: $base-font;
+    display: flex;
+    background-color: $text-light;
+    flex-direction: column;
+
+    .header {
+        font-size: 2em;
+        flex: 10;
+        background-color: $secondary;
+        color: $text-light;
+        @include flex-center;
+        clip-path: circle(50vh at 50% -41vh);
+    }
+    .messages {
+        flex: 70;
+        margin: 0;
+        padding: 0.5em 1em;
+        overflow-y: auto;
+
+        div {
+            border: 1px solid grey;
+            border-radius: 5px;
+            margin: 3px 10px;
+            padding: 2px 5px;
+        }
+        span.messageDate {
+            color: $text-dark;
+            font-style: italic;
+            font-size: smaller;
+        }
+        span.user {
+            color: $text-dark;
+            font-style: bold;
+        }
+        a i {
+            font-size: 3em;
+        }
+    }
+    .type_area {
+        flex: 10;
+        margin: 0;
+        background-color: $secondary;
+        @include flex-center;
+
+        form {
+            width: 96%;
+        }
+        .controls {
+            width: 100%;
+            margin: 0.5em 0;
+            height: 60%;
+            display: grid;
+            grid-template-columns: 80% 10% 10%;
+
+            input#message {
+                border-top-left-radius: 8px;
+                border-bottom-left-radius: 8px;
+                border: 0;
+                padding: 0.3em 0.6em;
+                line-height: 1.5em;
+                font-size: 1.5em;
+            }
+
+            #postMessage {
+                background-color: $primary;
+                color: $text-light;
+                border: 0;
+                cursor: pointer;
+                @include flex-center;
+                font-size: 1.4em;
+            }
+            span#sendLocation {
+                background-color: $ascent;
+                color: $text-light;
+                border: 0;
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 8px;
+                cursor: pointer;
+                @include flex-center;
+                font-size: 1.8em;
+            }
+        }
+    }
+}
